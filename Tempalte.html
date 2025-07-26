@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHEFER</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+   <!--BootstrapLink-->
+  <link rel="stylesheet" href="./Template.css">
+   <!--CSSLink-->
+  <link href="https://fonts.cdnfonts.com/css/butler-stencil" rel="stylesheet">
+  <!--CDNfontLink-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.cdnfonts.com/css/emblema-one" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+    }
+    
+    .top-bar {
+        background-color:#1F2125;
+        color: #8d8f91;
+        padding: 15px;
+        font-size: 17px;
+      }
+      .main-navbar {
+        background-color: #0f0f0f;
+        height: 110px;
+      }
+      .navbar-brand {
+        font-family: 'Emblema One', sans-serif;
+        font-size: 60px  ;
+        background-color: #ff5722;
+        height: 188px;
+        color: white ;
+        font-weight: bolder;
+        margin-left: -1.5%;
+        padding-bottom: 50px ;
+        padding-top: 70px;
+        margin-top: -5.5%;
+        width:25%;
+    }
+    
+    .info_mail{
+        padding-right: 52%;
+    }
+     .fa-phone{
+         color: #ff5722;
+     }
+     .fa-envelope{
+        color: #ff5722;
+     }   
+      
+      .navbar-nav .nav-link {
+        color: white !important;
+        margin: 0 10px;
+        font-size: 18px;
+      }
+      .navbar-nav .nav-link.active,
+      .navbar-nav .nav-link:hover {
+        color: #ff5722 !important;
+      }
+      .social-icons{
+          padding-left:55%;
+      }
+      .social-icons i {
+        color: white;
+        font-size: 15px;
+        border: 1px solid white;
+        border-radius: 60%;
+        padding: 10px;
+        margin-left: 10px;
+      }
+     
+      @media (max-width: 991.98px) {
+      .top-bar {
+        display: none !important;
+      }
+      .info_mail{
+        display: none;
+    }
+     .top_call_icon{
+      display: none;
+     } 
+     .navbar-brand {
+      font-family: 'Emblema One', sans-serif;
+      font-size: 230%;
+      background-color: black;
+      height: 100px;
+      font-weight: bolder;
+      margin-top: -70px;
+      margin-left: -30px;
+    }
+    .navbar-toggler{
+      margin-right: -4%;
+    }
+    .main-navbar {
+      display: none;
+    }
+    
+    .social-icons{
+      display: none;
+    }
+    .social-icons i {
+      display: none;
+    }
+    
+    .p1_title{
+      color:rgba(255, 255, 255, 0.557);
+      font-weight: bold;
+      font-size: 70px !important;
+      padding: 5%;
+      font-family: 'Emblema One', sans-serif;
+    }
+    
+      .center-flex {
+        flex-direction: column;
+        justify-content: center;
+      }
+    
+      .center-flex img {
+        width: auto; /* Adjust image size */
+      }
+    
+      .arrow-icon {
+        font-size: 20px;
+        color: #ff5722;
+        margin: 5px 0 0 0; /* small margin above */
+        text-align: left;
+      }
+    
+      .center-flex {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        text-align: center;
+      }
+      
+      .img-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* full width on small screens */
+        max-width: 400px; /* optional: max size for larger screens */
+      }
+      
+      .center-flex img {
+        width: 100%;      /* Responsive width */
+        height: auto;     /* Keep image ratio */
+        max-width: 100%;  /* Prevent overflow */
+      }
+      
+      .arrow-icon {
+        
+        font-size: 20px;
+        color: #ff5722;
+        text-align: left;
+        margin: 5px 0 0 0;
+      }
+      .center-flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        text-align: left;
+      }
+      
+      .img-block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* align content to left */
+        width: 100%;
+        max-width: 400px;
+      }
+      
+      .center-flex img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+      }
+      
+      .arrow-icon {
+        font-size: 20px;
+        color: #ff5722;
+        margin: 5px 0 0 0; /* small margin above */
+        text-align: left;
+      }
+      .about_page_img{
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+        margin: 0px !important;
+        padding:5% !important;
+        padding-top: 14% !important;
+        border-top-left-radius: 55%  !important;
+      }
+      .card_img{
+        width: 80px !important;
+          flex-direction: column;
+      }
+      .about_head{
+        font-size:40px !important ;
+      }
+      .about_us{
+        font-size: 20px !important;
+      }
+      .page3_card{
+        background-color: black;
+        
+        border-radius:50%;
+        text-align: center;
+      }
+      .page3_bg{
+        padding:0px  !important;
+      }
+      .center-flex{
+        margin: 0px !important;
+        padding: 0px !important;
+      }
+      .discount{
+        color: rgba(255, 255, 255, 0.557);
+        font-weight: bold;
+        font-size: 35px !important;
+        font-family: 'Emblema One', sans-serif;
+        text-align: center;
+        margin: 5% !important;
+      }
+      .order_btn{
+        margin-bottom: 20% !important;
+        font-size: 15px !important;
+      }
+      .menu{
+        padding-top: 10% !important;
+      }
+      .menu_head{
+    
+        font-size: 30px !important;
+      }
+     
+      
+    }
+    
+    .p1_img1{
+      width: 100%;
+    }
+      .page1_bg{
+          background-color: #1F2125 ;
+          height: cover;
+      }
+      .p1_title{
+          color:rgba(255, 255, 255, 0.557);
+          font-weight: bold;
+          font-size: 100px;
+          padding: 5%;
+          text-align: center !important;
+          font-family: 'Emblema One', sans-serif;
+      }
+      .center-flex {
+        display: flex;
+        justify-content: center;
+      }
+      
+      .p1_img1{
+          height: 300px;
+          width:450px;
+          border-radius: 30px;
+      }
+      .p1_img2{
+        height: 530px;
+        width:480px;
+        border-radius: 30px;
+      }
+      .img_discription{
+          color:white;
+      }
+      .fa-arrow-down{
+          color:white;
+      }
+      
+      .fa-arrow-up{
+        color:white;
+      }
+      .page2_bg{
+          background-color: white;
+          background-size: cover;
+          margin-bottom: 3%;
+      }
+      .page2_img{
+          height: 610px;
+          width:520px; 
+          border-radius: 300px 10px 10px 10px ;
+          margin-top:10%;
+          margin-left: 4%;
+    
+      }
+      
+      .about_page_img{
+        height: 610px;
+          width:520px; 
+          border-radius: 300px 10px 10px 10px ;
+          margin-top:10%;
+          margin-left: 4%;
+      }
+      .about_us{
+          color: #ff5722;
+          font-size:30px ;
+         
+          margin-top:10%;
+      }
+      .about_head{
+        color:black;
+        font-family: 'Emblema One', sans-serif;
+        font-weight: bold;
+        font-size: 60px;
+      }
+      .about_dis{
+        color: #8d8f91;
+        font-size: 17px;
+      }
+      .about_cards{
+          background-color:#f5f6f8;
+          background-size: cover;
+          border-radius: 15px;
+      }
+      .card_img{
+        background-color: #ff5722;
+        border-radius:50% ;
+        height: 80px;
+        margin: 5%;
+      }
+      .card_head{
+        font-weight: bold;
+        font-size: 27px;
+        margin-left: 5%;
+      }
+      .card_dis{
+        color: #8d8f91;
+        font-size: 17px;
+        margin: 5%;
+      }
+    
+      .page3_bg{
+        background-color: #1F2125 ;
+          height: cover;
+      }
+      .fa-star{
+        color: #ff5722;
+        font-size: 25px;
+        padding-top: 27%;
+        
+      }
+    
+      .fa-user-group{
+        color: #ff5722;
+        font-size: 25px;
+        padding-top: 27%;
+      }
+      .fa-check{
+        color: #ff5722;
+        font-size: 30px;
+        padding-top: 27%;
+        font-weight: bold;
+      }
+      .fa-mug-hot{
+        color: #ff5722;
+        font-size: 25px;
+        padding-top: 27%;
+      }
+      .page3_card{
+        background-color: black;
+        height: 80px;
+        width:80px;
+        border-radius:50%;
+        text-align: center;
+        padding-top: 1.8%;
+        
+      }
+      .page3_card_dis{
+        color:white;
+      }
+      .page3_1234{
+         color:rgba(255, 255, 255, 0.557);
+          font-weight: bold;
+          font-size: 40px;
+          font-family: 'Emblema One', sans-serif;
+      }
+      
+      
+      .page4_bg{
+          
+        margin: 0;
+         background: linear-gradient(to top, #1F2125 85%, #ffffff 15%); 
+         background-size: cover;
+      }
+      .page4_cards{
+      
+          background: linear-gradient(to bottom, #f5f6f8 0%, #f5f6f8 70%, #1F2125 100%);
+          background-color: #f5f6f8; /* fallback */
+          background-size: cover;
+          border-radius: 15px;
+          text-align: center;
+          padding: 4%;
+          margin: 2%;
+      
+      
+    }
+    .p4card_img{
+      background-color: white;
+      border-radius:50% ;
+      height: 150px;
+      
+    
+    }
+    .p4card_head{
+      font-weight: bold;
+      font-size: 30px;
+      font-family: 'Emblema One', sans-serif;
+     
+    }
+    .p4card_dis{
+      color: #8d8f91;
+      font-size: 17px;
+    }
+    .fa-arrow-right{
+      color:#ff5722;
+    }
+    .read_more{
+      color: #ff5722;
+      font-weight: bold;
+    }
+    .discount{
+      color: rgba(255, 255, 255, 0.557);
+      font-weight: bold;
+      font-size: 70px;
+      font-family: 'Emblema One', sans-serif;
+      text-align: center;
+      margin: 3%;
+    }
+    .order_btn{
+      background-color: #ff5722;
+      color: white;
+      border-radius: 8px;
+      border-style: none;
+      font-family: 'Emblema One', sans-serif;
+      height: 50px;
+      width: 100%;
+      max-width: 180px;
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 5%;
+    }
+    .page5_bg{
+      background-color: white;
+      background-size: cover;
+      margin-top: 4%;
+    }
+    .menu{
+      color:#ff5722;
+      font-size: 22px;
+      text-align: center;
+    }
+    .menu_head{
+      color: black;
+      font-family: 'Emblema One', sans-serif;
+      font-size: 65px;
+      font-weight: bold;
+      text-align: center;
+    }
+    
+    .button-group {
+      background-color: #1F2125;
+      border-radius: 30px;
+      padding: 5px;
+      width: fit-content;
+    
+    }
+    
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 30px;
+      color: white;
+      font-weight: bold;
+    }
+    
+    .btn.active {
+      background-color: #FF5722; /* orange highlight */
+      color: white;
+    }
+    .image-container {
+      position: relative;
+      width: 25%;
+      width: 100%;
+    max-width: 25%;
+     /* or set fixed width if needed */
+    }
+    
+    .image-container img {
+      display: block;
+      max-width: 100%;
+      
+    }
+    
+    .label {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background-color: #1F2125;
+      color: #FF5722;
+      padding: 8px 15px;
+      border-radius: 20px; 
+      font-family: sans-serif;
+    }
+    .experts_img{
+         
+        width: 100%;
+    max-width: 33%;
+    
+        border-radius: 300px 10px 10px 10px ;
+    }
+    .Experts_card {
+      position: relative;
+      width: 100%;
+      max-width: 100% !important;
+      border-radius: 200px 10px 10px 10px ;
+      overflow: hidden;
+      font-family: sans-serif;
+    }
+    
+    .Experts_card img {
+      width: 80%;
+      height: auto;
+      display: block;
+    }
+    
+    .Experts_card .info {
+      position: absolute;
+      bottom: 0;
+      width: 90%;
+      background: rgba(31, 33, 37, 0.9); /* semi-transparent dark overlay */
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+    }
+    
+    .Experts_card .info h3 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: bold;
+    
+    }
+    
+    .Experts_card .info p {
+      margin: 5px 0 0;
+      font-size: 15px;
+      letter-spacing: 2px;
+      color: #ccc;
+    }
+    .Testimonial_bg{
+      background-color:#1F2125 ;
+      background-size: cover;
+      border-bottom-right-radius: 320px;
+      border-top-left-radius: 320px;
+    }
+    .testimonial_h{
+      color:#ff5722;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .testimonial_h1{
+      color:rgba(255, 255, 255, 0.557);
+      font-weight: bold;
+      font-size: 64px;
+      font-family: 'Emblema One', sans-serif;
+    }
+    .carousel_dis{
+      color:white;
+      font-size: 25px;
+    }
+    .carousel_img{
+      border-radius: 50%;
+      height: 90px;
+    }
+    .custom-arrow {
+      width: 40px;
+      height: 40px;
+      background-color: #ff5722;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-size: 100% 100%;
+    }
+    
+    
+    .blog_card {
+    position: relative;
+    width:33%;
+    border-radius: 10px;
+    height: 500px;
+    overflow: hidden;
+    font-family: sans-serif;
+    }
+    
+    .blog_card img {
+    width: 100%;
+    height:69%;
+    display: block;
+    }
+    
+    .blog_card .blog_card_info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background:#1F2125; /* semi-transparent dark overlay */
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    height: 32%;
+    }
+    
+    .vertical-line {
+      width: 0.5px;              /* Thickness of the line */
+      height: 70px;           /* Height of the line */
+      background-color:white; /* Line color */
+    }
+    .blog_card_head{
+      color: white;
+      font-family: 'Emblema One', sans-serif;
+      font-size: 22px;
+    
+    }
+    
+    
+    
+    /* Font Awesome (make sure it's included in your project) */
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+    
+    .image-container {
+      display: flex;
+      position: relative;
+      width: fit-content;
+    }
+    
+    .side-image {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .insta-icon {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      border-radius: 50%;
+      padding: 20px;
+      font-size: 32px;
+      color: #C13584;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+    .lastpage_bg{
+      background-color:#1F2125  ;
+      background-size: cover;
+    }
+    .last_sub_head{
+      font-family: 'Emblema One', sans-serif;
+      color:white;
+      font-weight: 10px;
+      font-size: 28px;
+    }
+    .last_p{
+      color:rgba(255, 255, 255, 0.557);
+    }
+    .last_icons{
+      color:#ff5722;
+    }
+    .footer_icon{
+      background-color: #ff5722;
+      color:white;
+      font-size: 18px;
+      padding:5%;
+      border-radius: 50%;
+    }
+    .last_page_sub_bg{
+      background-color: black;
+     background-size: cover;
+      margin-right: 4%;
+      
+      width: 28%;
+     
+    }
+    .sub_head_card{
+        font-size: 17px;
+        color:white;
+        font-weight: bold;
+        padding-top: 5%;
+        text-align: center;
+    }
+    .last_sub_card_p{
+      color:rgba(255, 255, 255, 0.557);
+      font-size: 15px;
+      text-align: center;
+    
+    }
+    .input_type{
+      height: 55px;
+      width:100%;
+      border-radius: 12px 0px 0px 12px;
+      border-style: none;
+      padding:5%;
+    }
+    .sign_up{
+      background-color: #ff5722;
+      color: white;
+      font-family: 'Emblema One', sans-serif;
+      height: 56px;
+      width:90px;
+      border-radius: 0px 12px 12px 0px;
+      border-style: none;  
+    }
+    .last_page_footer_bg{
+      background-color: black;
+     background-size: cover;
+     margin-top: -2.7%;
+    }
+    .copy_rights{
+      color:rgba(255, 255, 255, 0.557);
+      padding-left: 15%;
+    }
+    .copy_span{
+      color: white;
+      font-weight: bold;
+    }
+    
+    
+    .page3_bg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .custom-flex-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .custom-flex-item {
+      flex: 1 1 300px;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+    
+    /* Make images responsive */
+    .p1_img1,
+    .p1_img2 {
+      width: 100%;
+      height: auto;
+    }
+    
+    /* Optional: spacing and center alignment for mobile */
+    @media (max-width: 768px) {
+      .custom-flex-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .custom-flex-item {
+        text-align: center;
+      }
+      .img_discription {
+        padding: 0 10px;
+      }
+    }
+    
+    
+    
+    .image-container {
+      flex: 1 1 25%;
+      max-width: 25%;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    .image-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+    
+    /* Desktop (4 per row) */
+    .image-container {
+      flex: 1 1 25%;  /* 4 per row */
+      max-width: 25%;
+    }
+    
+    /* Tablet (3 per row) */
+    @media (max-width: 992px) and (min-width: 577px) {
+      .image-container {
+        flex: 1 1 33.3333%;
+        max-width: 33.3333%;
+      }
+    }
+    /* Mobile (1 per row) */
+    @media (max-width: 576px) {
+      .image-container {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+    /* Center image inside container */
+    .image-container {
+      display: flex;
+      flex-direction: column; /* so image and label stack */
+      align-items: center;    /* center horizontally */
+      text-align: center;
+      box-sizing: border-box;
+    }
+    
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    
+    
+    
+    /* Tablet: 3 per row */
+    @media (max-width: 992px) {
+      .Experts_card {
+        width: 100%;
+      }
+      .carousel_img{
+        border-radius: 50%;
+        width:20% !important;
+      }
+    }
+    
+    /* Mobile: 1 per row */
+    @media (max-width: 576px) {
+      .Experts_card {
+        width: 100%;
+      }
+      .carousel_img{
+        border-radius: 50%;
+        width:25% !important;
+        height: 20% !important;
+      }
+    }
+    
+    .Experts_card img {
+      width: 90%;
+      height: auto;
+      display: block;
+    }
+    
+    .testimonial_image {
+      width: 100%;
+      max-width: 400px; /* or any preferred max size */
+      height: auto;
+      border-radius: 320px 0px 0px 0px;
+      display: block;
+    }
+    
+    /* Optional: Center the image */
+    .testimonial_image {
+      margin: 0 auto;
+    }
+    @media (max-width: 576px) {
+      .testimonial_image {
+        max-width: 300px;
+      }
+    }
+    
+    
+    @media (max-width: 576px) {
+      .d-flex.flex-row.justify-content-center {
+        flex-direction: column !important;
+        align-items: center;
+      }
+    
+      .blog_card {
+        width: 100% !important;
+        margin: 10px 0 !important;
+        
+      }
+    
+      .blog_card img {
+        width: 100%;
+        height: 80%;
+      }
+    
+      .blog_card_info .d-flex.flex-row {
+        flex-direction: column !important;
+        align-items: center;
+        text-align: center;
+      }
+    
+      .vertical-line {
+        display: none;
+      }
+    
+      .blog_card_head {
+        font-size: 18px !important;
+        line-height: 1.4;
+        margin-top: 10px;
+      }
+    
+      .blog_card_info p {
+        font-size: 10px;
+      }
+    }
+    
+    
+    @media (max-width: 576px) {
+      .lastpage_bg > .d-flex {
+        flex-direction: column !important;
+        align-items: start;
+      }
+    
+      .lastpage_bg > .d-flex > div {
+        width: 100%;
+        padding: 20px 10px;
+        text-align: start;
+      }
+    
+      .lastpage_bg .d-flex.flex-row.justify-content-center {
+        flex-wrap: nowrap;
+        flex-direction: row !important;
+        justify-content: start;
+      }
+    
+      .input_type {
+        width: 60%;
+        margin-right: 0px;
+      }
+    
+      .sign_up {
+        width: 120%;
+        margin-top: 10%;
+      }
+    }
+    @media (max-width: 1024px){
+      .top-bar {
+        background-color:#1F2125;
+        color: #8d8f91;
+        padding: 15px;
+        font-size: 17px;
+      }
+      .main-navbar {
+        background-color: #0f0f0f;
+        height: 110px;
+      }
+      .navbar-brand {
+        
+        font-size: 50px;
+        
+    }
+    
+    .info_mail{
+        padding-right:44%;
+    }
+     .fa-phone{
+         color: #ff5722;
+     }
+     .fa-envelope{
+        color: #ff5722;
+     }   
+      
+      .navbar-nav .nav-link {
+        color: white !important;
+        margin: 0 10px;
+        font-size: 18px;
+      }
+      .navbar-nav .nav-link.active,
+      .navbar-nav .nav-link:hover {
+        color: #ff5722 !important;
+      }
+      
+      .social-icons i {
+        color: white;
+        font-size: 15px;
+        border: 1px solid white;
+        border-radius: 60%;
+        padding: 10px;
+        
+      }
+    }
+    
+    @media (max-width: 1280px){
+      .social-icons{
+        padding-left:30%;
+    }
+    .navbar-brand {
+      
+      height: 180px;
+      
+    }
+    
+    }
+    @media (max-width: 1024px){
+      .social-icons{
+        padding-left:10%;
+    }
+    .navbar-brand {
+      
+      height: 130px;
+      padding-bottom: 11%;
+      
+    }
+    }
+    @media (max-width: 1166px){
+      .info_mail{
+        padding-right:48%;
+    }
+    }
+    @media (max-width: 994px){
+      .info_mail{
+        padding-right:45%;
+    }
+    }
+    @media (max-width: 1024px){
+      .info_mail{
+        padding-right:45%;
+    }
+    }
+    
+    
+    @keyframes fadeInFromLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-20px); /* slight left offset */
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    /* Title animation (optional: still from bottom) */
+    /* Title animation */
+    #HOME_pg .p1_title {
+      opacity: 0;
+      animation: fadeInFromLeft 0.8s ease-out forwards;
+      animation-delay: 0.2s;
+    }
+    
+    /* Each flex item fades in from left with delay */
+    #HOME_pg .custom-flex-item {
+      opacity: 0;
+      animation: fadeInFromLeft 0.8s ease-out forwards;
+    }
+    
+    /* Stagger them */
+    #HOME_pg .custom-flex-item:nth-child(1) {
+      animation-delay: 0.3s;
+    }
+    
+    #HOME_pg .custom-flex-item:nth-child(2) {
+      animation-delay: 0.5s;
+    }
+    
+    #HOME_pg .custom-flex-item:nth-child(3) {
+      animation-delay: 0.8s;
+    }
+    
+    @keyframes upDown {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(10px); /* move down */
+      }
+      100% {
+        transform: translateY(0); /* back to original */
+      }
+    }
+    
+    .bounce-arrow {
+      animation: upDown 1s ease-in-out infinite;
+      font-size: 35px; /* Increase size */
+       
+      }
+      
+    
+    /* Hide initially */
+    #ABOUT_pg {
+      opacity: 0;
+      transform: translateY(60px);
+      animation: fadeInUp 1s ease-out forwards;
+      animation-delay: 1s; /* delay simulates scroll into view */
+    }
+    
+    /* Animation keyframes */
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    #ABOUT_pg {
+      opacity: 0;
+      transition: all 1s ease-in-out;
+      transform: translateY(60px);
+    }
+    
+    #ABOUT_pg:target {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<div>
+  <!-- Top Bar -->
+<div class="top-bar top_info d-flex justify-content-end">
+  <div class="info_mail"><i class="fa-solid fa-envelope"></i> info@example.com</div>
+  <div  class="top_call_icon" ><i class="fa-solid fa-phone"></i> +012 345 6789</div>
+</div>
+<!--Main Navbar-->
+<nav class="navbar navbar-expand-lg main-navbar">
+<div class="navbar-brand d-flex justify-content-center" href="#">CHEFER</div>
+
+<div class=" d-flex flex-row justify-content-between" id="navbarNav">
+  <input type="checkbox" id="nav-toggle" hidden />
+  <label for="nav-toggle" class="nav-toggle-label">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item"><a class="nav-link active" href="#HOME_pg">Home</a></li>
+    <li class="nav-item"><a class="nav-link" href="#ABOUT_pg">About</a></li>
+    <li class="nav-item"><a class="nav-link" href="#MENU_pg">Menu</a></li>
+    <li class="nav-item"><a class="nav-link" href="#CHEFS_pg">Chefs</a></li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" data-toggle="dropdown">Pages</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Features</a>
+        <a class="dropdown-item" href="#">Blog post</a>
+        <a class="dropdown-item" href="#">Testimonial</a>
+        <a class="dropdown-item" href="#">404 Error</a>
+      </div>
+    </li>
+    <li class="nav-item"><a class="nav-link" href="#contact_pg">Contact</a></li>
+  </ul>
+  <div class="social-icons d-flex align-items-center">
+    <i class="fab fa-facebook-f"></i>
+    <i class="fab fa-twitter"></i>
+    <i class="fab fa-linkedin-in"></i>
+  </div>
+</div>
+</nav>
+
+
+    
+<!-- Bootstrap 5 CSS -->
+
+<!-- Mobile/Tablet Navbar Only (hidden on lg and above) -->
+
+<!-- Mobile/Tablet Navbar Only (hidden on lg and above) -->
+<nav class="navbar navbar-dark d-lg-none" style="background-color:black;">
+  <div class="container-fluid" style="background-color:black; height: 80px;">
+    <div class="container-fluid">
+      <div class="d-flex w-100 justify-content-between align-items-center">
+        <a class="navbar-brand fw-bold" style="color:#ff5722; " href="#">CHEFER</a>
+        <button class="navbar-toggler" type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mobileNavbarToggle"
+          aria-controls="mobileNavbarToggle"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Collapsible menu items -->
+  <div class="collapse navbar-collapse" id="mobileNavbarToggle" style="background-color: #000000;">
+    <ul class="navbar-nav ms-3 py-2">
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">Menu</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">Chefs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">Pages</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+</div>
+
+
+<div id="HOME_pg" class="page1_bg pb-5 fadeSlideInStagger">
+  <h1 class="p1_title center-flex">John Doe</h1>
+  <div class="custom-flex-container m-3">
+    <div class="custom-flex-item">
+      <img class="p1_img1 p-4" src="https://themewagon.github.io/Chefer/img/hero-2.jpg" alt="">
+      <i  class="fa-solid fa-arrow-down upDown bounce-arrow ml-4"></i>
+      <p class="img_discription m-3">Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod.</p>
+    </div>
+
+    <div class="custom-flex-item">
+      <img class="p1_img2 p-4" src="https://themewagon.github.io/Chefer/img/hero-1.jpg" alt="">
+    </div>
+
+    <div class="custom-flex-item">
+      <p class="img_discription m-3">Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod.</p>
+      <i class="fa-solid fa-arrow-up upDown bounce-arrow ml-4"></i>
+      <img class="p1_img1 p-4" src="https://themewagon.github.io/Chefer/img/hero-3.jpg" alt="">
+    </div>
+  </div>
+</div>
+
+
+<div id="ABOUT_pg" class="page2_bg fadeSlideIn fadeInUp">
+    <div class="center-flex">
+        <img class="about_page_img" src="https://themewagon.github.io/Chefer/img/about.jpg" alt="">
+        <div class="m-5">
+            <p class="about_us">About Us</p>
+            <h1 class="about_head">Cooking Together With The Expert</h1>
+            <p class="about_dis">Nonumy erat diam duo labore clita. Sit magna ipsum dolor sed ea duo at ut. Tempor sit lorem sit magna ipsum duo. Sit eos dolor ut sea rebum, diam sea rebum lorem kasd ut ipsum dolor est ipsum. Et stet amet justo amet clita erat, ipsum sed at ipsum eirmod labore lorem.</p>
+            <div class="center-flex">
+                <div class="about_cards m-3">
+                    <img class="card_img" src="https://themewagon.github.io/Chefer/img/feature-1.png" alt="">
+                    <h1 class="card_head">Master Chefs</h1>
+                    <p class="card_dis">Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore.</p>
+                </div>
+
+                <div class="about_cards m-3">
+                  <img class="card_img" src="https://themewagon.github.io/Chefer/img/feature-3.png" alt="">
+                  <h1 class="card_head">Quality Food</h1>
+                  <p class="card_dis">Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore.</p>
+              </div>
+            </div>
+        </div>
+    </div>  
+</div>
+
+<div  class="page3_bg center-flex pt-3 pb-3">
+  <div class="center-flex m-3 p-5">
+    <div class="page3_card m-3">
+      <i class="fa-solid fa-star"></i>
+    </div>
+    <div style="text-align:center" ;>
+      <h4 class="page3_card_dis">Years</h4>
+      <h1 class="page3_1234"  data-target="1234">0</h1>
+    </div>
+  </div>
+
+
+  <div class="center-flex m-3 p-5">
+    <div class="page3_card m-3">
+      <i class="fa-solid fa-user-group"></i>
+    </div>
+    <div style="text-align:center;">
+      <h4 class="page3_card_dis">Clients</h4>
+      <h1 class="page3_1234" data-target="1234">0</h1>
+    </div>
+  </div>
+  
+
+  <div class="center-flex m-3 p-5">
+    <div class="page3_card m-3">
+      <i class="fa-solid fa-check"></i>
+    </div>
+    <div style="text-align:center" ;>
+      <h4 class="page3_card_dis">Awards</h4>
+      <h1 class="page3_1234" data-target="1234">0</h1>
+    </div>
+  </div>
+
+  <div class="center-flex m-3 p-5">
+    <div class="page3_card m-3">
+      <i class="fa-solid fa-mug-hot "></i>
+    </div>
+    <div style="text-align:center" ;>
+      <h4 class="page3_card_dis">Events</h4>
+      <h1 class="page3_1234" data-target="1234">0</h1>
+    </div>
+  </div>
+</div>  
+</div> 
+</div>
+
+<div class="page4_bg ">
+  <div class="row mt-5 justify-content-center">
+    <!-- Card 1 -->
+    <div class="col-12 col-sm-6 col-lg-4 mb-4 d-flex justify-content-center">
+      <div class="page4_cards p-3 text-center">
+        <img class="p4card_img" src="https://themewagon.github.io/Chefer/img/feature-1.png" alt="">
+        <h1 class="p4card_head">Best Chef</h1>
+        <p class="p4card_dis">Sed amet tempor amet sit kasd sea lorem dolor ipsum elitr dolor amet kasd elitr duo vero amet amet stet</p>
+        <p class="read_more">Read More <i class="fa-solid fa-arrow-right"></i></p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-12 col-sm-6 col-lg-4 mb-4 d-flex justify-content-center">
+      <div class="page4_cards p-3 text-center">
+        <img class="p4card_img" src="https://themewagon.github.io/Chefer/img/feature-2.png" alt="">
+        <h1 class="p4card_head">Menu Variations</h1>
+        <p class="p4card_dis">Sed amet tempor amet sit kasd sea lorem dolor ipsum elitr dolor amet kasd elitr duo vero amet amet stet</p>
+        <p class="read_more">Read More <i class="fa-solid fa-arrow-right"></i></p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-12 col-sm-6 col-lg-4 mb-4 d-flex justify-content-center">
+      <div class="page4_cards p-3 text-center">
+        <img class="p4card_img" src="https://themewagon.github.io/Chefer/img/feature-3.png" alt="">
+        <h1 class="p4card_head">Healthy Food</h1>
+        <p class="p4card_dis">Sed amet tempor amet sit kasd sea lorem dolor ipsum elitr dolor amet kasd elitr duo vero amet amet stet</p>
+        <p class="read_more">Read More <i class="fa-solid fa-arrow-right"></i></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Discount Section -->
+  <div class="text-center mt-4">
+    <h1 class="discount">
+      <span style="color: #ff5722;">30% Discount</span><br>For This Summer
+    </h1>
+    <button class="order_btn" href="HOME_pg">Order Now</button>
+  </div>
+</div>
+
+
+<div id="MENU_pg" class="page5_bg">
+    <p class="menu">OUR MENU</p>
+    <h1 class="menu_head">Hands Craft More<br> Than Meals</h1>
+    <div class="d-flex flex-row justify-content-center">
+      <div class="button-group">
+        <button class="btn active">BREAKFAST</button>
+        <button class="btn">LAUNCH</button>
+        <button class="btn">DINNER</button>
+      </div>
+    </div>
+    <div class="center-flex d-flex flex-row justify-content-center">
+      
+      <div class="image-container" >
+        <img src="https://themewagon.github.io/Chefer/img/menu-1.jpg" alt="Food">
+        <div class="label">BBQ Chicken</div>
+      </div>
+
+      <div class="image-container">
+        <img src="https://themewagon.github.io/Chefer/img/menu-2.jpg" alt="Food">
+        <div class="label">BBQ Chicken</div>
+      </div>
+
+      <div class="image-container">
+        <img src="https://themewagon.github.io/Chefer/img/menu-3.jpg" alt="Food">
+        <div class="label">BBQ Chicken</div>
+      </div>
+
+      <div class="image-container ">
+        <img src="https://themewagon.github.io/Chefer/img/menu-4.jpg" alt="Food">
+        <div class="label">BBQ Chicken</div>
+      </div>
+    </div>
+
+    <div class="center-flex d-flex flex-row justify-content-center">
+      <div class="image-container">
+        <img src="https://themewagon.github.io/Chefer/img/menu-5.jpg" alt="Food">
+        <div class="label">BBQ Chicken</div>
+      </div>
+
+      <div class="image-container">
+        <img src="https://themewagon.github.io/Chefer/img/menu-6.jpg" alt="Food">
+        <div class="label">BBQ Chicken</div>
+      </div>
+
+      <div class="image-container">
+        <img src="https://themewagon.github.io/Chefer/img/menu-7.jpg" alt="Food">
+        <div class="label">BBQ Chicken</div>
+      </div>
+
+      <div class="image-container">
+        <img src="https://themewagon.github.io/Chefer/img/menu-8.jpg" alt="Food">
+        <div class="label">BBQ Chicken</div>
+      </div>
+    </div>
+
+    <p id="CHEFS_pg" class="menu mt-5">EXPERT CHEFS</p>
+    <h1 class="menu_head">Let's Meet The<BR> Expert</h1>
+    <div class="center-flex mb-5" >
+      <div class="Experts_card m-4">
+        <img src="https://themewagon.github.io/Chefer/img/team-1.jpg" alt="Chef Image">
+        <div class="info">
+          <h3>John Deo</h3>
+          <p>MASTER CHEF</p>
+        </div>
+      </div>
+
+      <div class="Experts_card m-4">
+        <img src="https://themewagon.github.io/Chefer/img/team-2.jpg" alt="Chef Image">
+        <div class="info">
+          <h3>John Deo</h3>
+          <p>MASTER CHEF</p>
+        </div>
+      </div>
+
+      <div class="Experts_card m-4">
+        <img src="https://themewagon.github.io/Chefer/img/team-3.jpg" alt="Chef Image">
+        <div class="info">
+          <h3>John Deo</h3>
+          <p>MASTER CHEF</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="Testimonial_bg">
+        <div class="center-flex">
+          <img class="testimonial_image"  style="max-width: 100%;
+          height: auto; ; border-radius: 320px 0px 0px 0px;"  src="https://themewagon.github.io/Chefer/img/testimonial.jpg" alt="">
+          <div class="m-5">
+            <p class="testimonial_h">TESTIMONIAL</p>
+            <h1 class="testimonial_h1">Our Client Say</h1>
+          
+            <div class="position-relative">
+              <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-interval="10000">
+                    <p class="carousel_dis"> <i style="color:#ff5722 ;" class="fa-solid fa-quote-left"></i> Dolores sed duo clita tempor justo dolor
+                      et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore
+                      et tempor diam tempor erat dolor rebum sit ipsum.</p>
+                    <div class="d-flex flex-row justify-content-start">
+                      <img class="carousel_img" src="https://themewagon.github.io/Chefer/img/testimonial-1.jpg" alt="">
+                      <div class="p-2">
+                        <p style="color:rgba(255, 255, 255, 0.557); font-weight: bold; font-size: 20px;">Client Name</p>
+                        <p style="color:rgba(255, 255, 255, 0.557);">PROFESSION</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-interval="2000">
+                    <p class="carousel_dis"> <i style="color:#ff5722 ;" class="fa-solid fa-quote-left"></i> Dolores sed duo clita tempor justo dolor
+                      et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore
+                      et tempor diam tempor erat dolor rebum sit ipsum.</p>
+                    <div class="d-flex flex-row justify-content-start">
+                      <img class="carousel_img" src="https://themewagon.github.io/Chefer/img/testimonial-2.jpg" alt="">
+                      <div class="p-2">
+                        <p style="color:rgba(255, 255, 255, 0.557); font-weight: bold; font-size: 20px;">Client Name</p>
+                        <p style="color:rgba(255, 255, 255, 0.557);">PROFESSION</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              <!-- Arrows placed side by side without gap -->
+              <div class="d-flex justify-content-start gap-2 custom-arrows-wrapper">
+                <!-- Left arrow (previous) -->
+                <a class="carousel-control-prev custom-arrow m-2" href="#carouselExampleInterval" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <!-- Right arrow (next) -->
+                <a class="carousel-control-next custom-arrow m-2" href="#carouselExampleInterval" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+              </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
+
+    <p class="menu mt-5">OUR BLOG</p>
+    <h1 class="menu_head">Latest Articles <br>rom Food Blog</h1>
+
+    <div class="d-flex flex-row justify-content-center m-1">
+      
+      
+        <div class="blog_card m-4">
+          <img src="https://themewagon.github.io/Chefer/img/menu-3.jpg" alt="Chef Image">
+          <div class="blog_card_info">
+            <div class="d-flex flex-row justify-content-center m-1">
+                <div class="m-1">
+                  <p>01<br>
+                    <span style="color:#ff5722 ; font-weight: 600;">JANUARY</span><br>
+                    2045</p>
+                </div>
+                <div class="vertical-line m-1"></div>
+                <div><h1 class="blog_card_head m-1">Sed amet tempor amet sit kasd sea lorem</h1></div>
+            </div>
+          </div>
+        </div>
+        <div class="blog_card  m-4">
+          <img src="https://themewagon.github.io/Chefer/img/menu-5.jpg" alt="Chef Image">
+          <div class="blog_card_info">
+            <div class="d-flex flex-row justify-content-center m-1">
+                <div class="m-1">
+                  <p>01<br>
+                    <span style="color:#ff5722 ; font-weight: 600;">JANUARY</span><br>
+                    2045</p>
+                </div>
+                <div class="vertical-line m-1"></div>
+                <div><h1 class="blog_card_head m-1">Sed amet tempor amet sit kasd sea lorem</h1></div>
+            </div>
+          
+          </div>
+        </div>
+  
+        <div class="blog_card  m-4">
+          <img src="https://themewagon.github.io/Chefer/img/menu-7.jpg" alt="Chef Image">
+          <div class="blog_card_info">
+            <div class="d-flex flex-row justify-content-center m-1">
+                <div class="m-1">
+                  <p>01<br>
+                    <span style="color:#ff5722 ; font-weight: 600;">JANUARY</span><br>
+                    2045</p>
+                </div>
+                <div class="vertical-line m-1"></div>
+                <div><h1 class="blog_card_head m-1">Sed amet tempor amet sit kasd sea lorem</h1></div>
+            </div>
+          
+          </div>
+        </div>
+      </div>
+
+      </div>
+      
+    <div class="d-flex flex-row justify-content-center mt-5">
+      <div class="image-container">
+        <img src="https://themewagon.github.io/Chefer/img/menu-2.jpg" alt="Food">
+      </div>
+      <div class="image-container">
+        <img src="https://themewagon.github.io/Chefer/img/menu-3.jpg" alt="Food">
+      </div>
+        <div class="image-container">
+          <img src="https://themewagon.github.io/Chefer/img/menu-4.jpg" alt="Food">  
+          
+        </div>
+        
+        <div class="image-container">
+          <img src="https://themewagon.github.io/Chefer/img/menu-5.jpg" alt="Food">
+        </div>
+        
+      
+      <div class="image-container">
+        <img src="https://themewagon.github.io/Chefer/img/menu-6.jpg" alt="Food">
+      </div>
+      <div class="image-container">
+        <img src="https://themewagon.github.io/Chefer/img/menu-7.jpg" alt="Food">
+      </div>
+      
+
+    </div>
+</div>
+
+<div class="lastpage_bg " id="contact_pg">
+<div class="d-flex flex-row justify-content-between">
+  <div class="p-5">
+    <h1 class="last_sub_head">Get In Touch</h1>
+    <p class="last_p"><i class="fa-solid fa-location-dot last_icons"></i> 123 Street, New York, USA</p>
+    <p class="last_p"><i class="fa-solid fa-envelope-open-text last_icons"></i> info@example.com</p>
+    <p class="last_p"><i class="fa-solid fa-phone-volume last_icons"></i> +012 345 67890</p>
+    <div class="d-flex flex-row justify-content-start">
+      <i class="fa-brands fa-twitter footer_icon m-1"></i>
+      <i class="fa-brands fa-facebook-f footer_icon m-1"></i>
+      <i class="fab fa-linkedin-in footer_icon m-1"></i>
+      <i class="fa-brands fa-instagram footer_icon m-1"></i>
+    </div>
+ </div>
+
+ <div class="p-5">
+   <h1  class="last_sub_head">Quick Links</h1>
+   <p  class="last_p"><i class="fa-solid fa-arrow-right"></i> Home</p>
+   <p  class="last_p"><i class="fa-solid fa-arrow-right"></i> About Us</p>
+   <p  class="last_p"><i class="fa-solid fa-arrow-right"></i> Food Menu</p>
+   <p  class="last_p"><i class="fa-solid fa-arrow-right"></i> Our Chefs</p>
+   <p  class="last_p"><i class="fa-solid fa-arrow-right"></i> Latest Blog</p>
+   <p  class="last_p"><i class="fa-solid fa-arrow-right"></i> Contact Us</p>
+ </div>
+
+ <div class="p-5">
+  <h1  class="last_sub_head">More Links</h1>
+  <p  class="last_p"><i class="fa-solid fa-arrow-right"></i> Home</p>
+  <p  class="last_p"><i class="fa-solid fa-arrow-right"></i> About Us</p>
+  <p  class="last_p"><i class="fa-solid fa-arrow-right"></i> Food Menu</p>
+  <p  class="last_p"><i class="fa-solid fa-arrow-right"></i> Our Chefs</p>
+  <p  class="last_p"><i class="fa-solid fa-arrow-right"></i> Latest Blog</p>
+  <p  class="last_p"><i class="fa-solid fa-arrow-right"></i> Contact Us</p>
+</div>
+
+<div class="last_page_sub_bg p-5">
+    <h1 class="last_sub_head" style="text-align:center ;">Newsletter</h1>
+    <h1 class="sub_head_card">SUBSCRIBE OUR NEWSLETTER</h1>
+    <p class="last_sub_card_p">Amet justo diam dolor rebum lorem sit stet <br> sea justo kasd</p>
+    <div class="d-flex flex-row justify-content-center">
+      <input class="input_type" type="text" placeholder="Your Email">
+      <label for=""><button class="sign_up">Sign Up</button></label>
+    </div>
+</div>
+</div>
+</div>
+ 
+<div class="last_page_footer_bg d-flex flex-row justify-content-between p-3">
+  <p class="copy_rights">©<span class="copy_span">2025.</span> All Rights Reserved. Distributed by <span class="copy_span">ThemeWagon</span></p>
+  <p class="copy_span" style="padding-right:140px;">Designed by Mounika</p>
+</div>
+
+<script>
+  const counters = document.querySelectorAll('.page3_1234');
+
+  counters.forEach(counter => {
+    counter.innerText = '0';
+    
+    const updateCounter = () => {
+      const target = +counter.getAttribute('data-target');
+      const current = +counter.innerText;
+      const increment = target / 200; // adjust speed here
+  
+      if (current < target) {
+        counter.innerText = `${Math.ceil(current + increment)}`;
+        setTimeout(updateCounter, 10);
+      } else {
+        counter.innerText = target; // Ensure exact final value
+      }
+    };
+    updateCounter ()
+    
+  });
+
+  
+
+  
+
+  
+</script>
+
+</body>
+</html>
